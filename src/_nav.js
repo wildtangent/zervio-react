@@ -11,6 +11,20 @@ export default {
     },
     {
       title: true,
+      name: 'Zerv.io',
+      wrapper: {
+        element: '',
+        attributes: {}
+      },
+      class: ''
+    },
+    {
+      name: 'Products',
+      url: '/products',
+      icon: 'icon-pencil'
+    },
+    {
+      title: true,
       name: 'Theme',
       wrapper: {            // optional wrapper object
         element: '',        // required valid HTML5 element tag

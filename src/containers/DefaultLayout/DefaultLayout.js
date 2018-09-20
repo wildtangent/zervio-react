@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import DevTools from '../../containers/DevTools';
 
 import {
   AppAside,
@@ -59,6 +60,8 @@ class DefaultLayout extends Component {
         <AppFooter>
           <DefaultFooter />
         </AppFooter>
+        <DevTools />
+
       </div>
     );
   }

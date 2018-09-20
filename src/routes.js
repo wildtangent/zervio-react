@@ -7,6 +7,21 @@ function Loading() {
   return <div>Loading...</div>;
 }
 
+const Products = Loadable({
+  loader: () => import('./views/Zerv/Products/Products'),
+  loading: Loading,
+});
+
+const Product = Loadable({
+  loader: () => import('./views/Zerv/Products/Product'),
+  loading: Loading,
+});
+
+const ProductEditor = Loadable({
+  loader: () => import('./views/Zerv/Products/ProductEditor'),
+  loading: Loading,
+});
+
 const Breadcrumbs = Loadable({
   loader: () => import('./views/Base/Breadcrumbs'),
   loading: Loading,
@@ -227,6 +242,9 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+  { path: '/products', exact: true, name: 'Products', component: Products },
+  { path: '/products/:id', exact: true, name: 'Product Details', component: Product },
+  { path: '/products/:id/edit', exact: true, name: 'Edit Product Details', component: ProductEditor },
 ];
 
 export default routes;
