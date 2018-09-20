@@ -65,9 +65,9 @@ class Products extends Component {
                   </thead>
                   <tbody>
                     {
-                      Object.values(products).map((product) => {
+                      Object.values(products).map((product, key) => {
                         return (
-                          <ProductRow product={product} />
+                          <ProductRow key={key} product={product} />
                         )
                       })
                     }

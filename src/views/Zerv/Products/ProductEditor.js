@@ -55,20 +55,24 @@ class ProductEditor extends Component {
                 <strong><i className="icon-info pr-1"></i>{product.name}</strong>
               </CardHeader>
               <CardBody>
-                {
-                  Object.entries(product).map(([key, value]) => {
-                    return (
-                      <tr key={key}>
-                        <td>{`${key}:`}</td>
-                        <td><strong><input type="text" value={value} /></strong></td>
-                      </tr>
-                    )
-                  })
-                }
-                <tr>
-                  <td></td>
-                  <td><Button color="primary">Submit</Button></td>
-                </tr>
+                <Table>
+                  <tbody>
+                    {
+                      Object.entries(product).map(([key, value]) => {
+                        return (
+                          <tr key={key}>
+                            <td>{`${key}:`}</td>
+                            <td><strong><input type="text" defaultValue={value} /></strong></td>
+                          </tr>
+                        )
+                      })
+                    }
+                    <tr>
+                      <td></td>
+                      <td><Button color="primary">Submit</Button></td>
+                    </tr>
+                  </tbody>
+                </Table>
               </CardBody>
             </Card>
           </Col>
